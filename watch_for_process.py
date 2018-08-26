@@ -26,6 +26,7 @@ def match_procs(proc_pattern, terminate_found):
     for match in matches:
         pid = match.strip().split(" ", 1)[0]
         proc = match.strip().rsplit(" ", 1)[-1]
+        print("{} matches with pid {}".format(match, pid))
         if terminate_found:
             try:
                 print(subprocess.check_output(['kill', '-9', pid]).decode())

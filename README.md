@@ -12,6 +12,11 @@ sudo is needed in the code below for permissions to terminate automount processe
 git clone https://github.com/galencm/watch-for-process
 cd watch-for-process/
 sudo python3 watch_for_process.py gph
+[sudo] password for user:
+25292 ?        00:00:00 gvfs-gphoto2-vo matches with pid 25292
+
+*gph* matches no processes
+*gph* matches no processes
 ```
 
 ## License
