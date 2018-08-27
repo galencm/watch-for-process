@@ -1,0 +1,15 @@
+[Unit]
+Description=generic template for watch_for_process.py
+After=multi-user.target
+
+[Service]
+Type=simple
+
+ExecStart=/bin/sh -c "watch_for_process.py gpho"
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+StandardOutput=journal
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
